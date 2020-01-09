@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useUserContext, updateUserContext } from "../contexts/user";
+import { useUserContext } from "../contexts/user";
 
 /**
  * This should update the user context with the new values for email and name
