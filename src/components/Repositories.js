@@ -15,6 +15,9 @@ import styled from 'styled-components';
  */
 
 const Repositories = () => {
+  React.useEffect(() => {
+    document.title = "Repositories";
+  })
   const [searchResults, setSearchResults] = React.useState()
 
   function debounce(func, wait) {

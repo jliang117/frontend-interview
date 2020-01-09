@@ -2,6 +2,9 @@ import * as React from "react";
 import { useSetUserContext } from "../contexts/user";
 
 const Login = () => {
+  React.useEffect(() => {
+    document.title = "Login";
+  })
   const [user, setUser] = React.useState({
     email: "",
     password: ""
@@ -39,6 +42,8 @@ const Login = () => {
         }}
       >
         <input
+          aria-label="email"
+          aria-required="true"
           name="email"
           value={user.email}
           onChange={event => {
@@ -46,6 +51,8 @@ const Login = () => {
           }}
         />
         <input
+          aria-label="password"
+          aria-required="true"
           name="password"
           value={user.password}
           onChange={event => {

@@ -5,6 +5,9 @@ import { useUserContext } from "../contexts/user";
  * This should update the user context with the new values for email and name
  */
 const Profile = () => {
+  React.useEffect(() => {
+    document.title = "Profile";
+  })
   const user = useUserContext();
   const [updatedUserInfo, setUpdatedUserInfo] = React.useState({
     name: user.name,
@@ -24,6 +27,7 @@ const Profile = () => {
         }}
       >
         <input
+          aria-label="email"
           name="email"
           value={updatedUserInfo.email}
           onChange={e => {
@@ -31,6 +35,7 @@ const Profile = () => {
           }}
         />
         <input
+          aria-label="name"
           name="name"
           value={updatedUserInfo.name}
           onChange={e => {
