@@ -2,10 +2,13 @@ import * as React from "react";
 import { useSetUserContext } from "../contexts/user";
 
 const Login = () => {
-  const [user] = React.useState({
+  const [user, setUser] = React.useState({
     email: "",
     password: ""
   });
+  const handleUserFieldUpdate = (email, password) => {
+    setUser({email, password})
+  }
   const [error, setError] = React.useState(null);
 
   React.useEffect(() => {
@@ -39,14 +42,14 @@ const Login = () => {
           name="email"
           value={user.email}
           onChange={event => {
-            user.email = event.target.value;
+            handleUserFieldUpdate(event.target.value, user.password);
           }}
         />
         <input
           name="password"
           value={user.password}
           onChange={event => {
-            user.password = event.target.value;
+            handleUserFieldUpdate(user.email, event.target.value);
           }}
         />
         <button type="submit">Login</button>
