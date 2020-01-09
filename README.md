@@ -48,7 +48,15 @@ Please, answer the following questions in this readme, underneath the question
 
 1. Name a newer feature of javascript that you believe is extra useful, and discuss how you have used it in this project, or how you would use it if needed.
 
+As far as impactful changes go, the addition of let and const has made it a lot easier to use and reuse simple, meaningful names within a project, and while in a small project like this where there's less to juggle and less chances of an overlap, it's still great to enlose names within a specific scope and not have to worry about that affecting anything later. 
+
 2. What are 3 things you think `React` does very poorly? What tools do this better, if any?
+
+On bigger projects with deeply nested components, it's easy to get lost in which components need what state, and making updates becomes an issue. I know Redux helps with that (and I guess is recommended over the createContext function now).
+
+Another thing I've been finding is that the speed of development on the framework sometimes makes it hard to leep up - for examples class components have now rolled into functional components, and now how do all the lifecycle methods get called again? I'm honestly still not sure, but it seems like a lot of lifecycle methods are now rolled into the useEffect hook. It's hard to trust the developers of the framework when sometimes drastic changes come out that alter workflows like that.
+
+Something that may just be syntax, but I prefer Vue's way of list rendering - https://vuejs.org/v2/guide/list.html - and I like how it plays well with popular libraries like vue-material, and makes it a bit easier to setup something like a great looking table with just the data model and knowledge of the column headers - https://vuematerial.io/components/table/
 
 ## Submissions
 
